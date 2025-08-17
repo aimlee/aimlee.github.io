@@ -12,6 +12,25 @@ import Header from "@/components/layout/Header";
 export default function Research() {
   const researchProjects = [
     {
+      period: "2025",
+      title: "Agentic AI(https://aigeeksgroup.github.io/)",
+      institution: "aigeeks group",
+      location: "Remote",
+      duration: "Present",
+      supervisor: "Group collaboration",
+      summary: "Developing intelligent agents using LLMs for web analysis and reasoning",
+      details: [
+        "Implemented agentic web analysis systems using large language models for automated reasoning",
+        "Developed information extraction and processing pipelines for web-based data sources",
+        "Created real-time signal listening systems in Node.js for dynamic web monitoring",
+        "Collaborated in group setting to design and implement autonomous AI agents",
+        "Built scalable architecture for continuous web data analysis and intelligent decision making",
+        "Integrated LLM capabilities with web scraping and real-time data processing"
+      ],
+      technologies: ["LLM", "Agentic AI", "Web Analysis", "Node.js", "Real-time Systems", "Web Scraping", "NLP", "JavaScript"],
+      type: "Agentic AI Research"
+    },
+    {
       period: "2024",
       title: "MAMBA STOCK",
       institution: "Australian Institute of Machine Learning",

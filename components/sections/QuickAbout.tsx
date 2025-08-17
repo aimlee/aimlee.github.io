@@ -100,7 +100,7 @@ export default function QuickAbout() {
           textAlign="left"
         >
           <Heading size="xl" color="accent1">
-            Experience
+            Timeline
           </Heading>
           <Box h="1px" bg="accent1" w="60px" />
           <VStack
@@ -142,93 +142,7 @@ export default function QuickAbout() {
             </Box>
           </VStack>
         </VStack>
-
-        {/* Skills */}
-        <VStack
-          w="full"
-          align="flex-start"
-          textAlign="left"
-        >
-          <Heading size="xl" color="accent1">
-            Skills
-          </Heading>
-          <Box h="1px" bg="accent1" w="60px" />
-          <HStack
-            wrap="wrap"
-            gap={3}
-            justify="center"
-            maxW="3xl"
-          >
-            {skills.map((skill) => (
-              <Tag.Root
-                key={skill}
-                variant="outline"
-                borderColor="gray.600"
-                borderRadius="full"
-                px="4"
-                py="2"
-                _hover={{ 
-                  borderColor: "accent1", 
-                  transform: "translateY(-2px)",
-                  shadow: "md"
-                }}
-                transition="all 0.2s ease"
-              >
-                <Tag.Label color="text" fontWeight="medium">
-                  {skill}
-                </Tag.Label>
-              </Tag.Root>
-            ))}
-          </HStack>
-        </VStack>
-        <VStack
-          w="full"
-          align="flex-start"
-          textAlign="left"
-        >
-          <Heading size="xl" color="accent1">
-            Experience
-          </Heading>
-          <Box h="1px" bg="accent1" w="60px" />
-          <VStack
-            maxW="3xl"
-            align="flex-start"
-            textAlign="left"
-          >
-            <Box>
-              <Text fontSize="lg" color="text">
-                <Text as="span" fontWeight="bold" color="accent1">2024–2025:</Text> CPO @ SPOTFAKE.AI
-              </Text>
-              <Text color="gray.400" fontSize="sm">
-                Full Stack & ML pipelines
-              </Text>
-            </Box>
-            <Box>
-              <Text fontSize="lg" color="text">
-                <Text as="span" fontWeight="bold" color="accent1">2023–2024:</Text> Research/Teaching @ University of Adelaide
-              </Text>
-              <Text color="gray.400" fontSize="sm">
-                Mentored 200+ students in CS/AI
-              </Text>
-            </Box>
-            <Box>
-              <Text fontSize="lg" color="text">
-                <Text as="span" fontWeight="bold" color="accent1">2022:</Text> Full-Stack @ GoCrowd.io
-              </Text>
-              <Text color="gray.400" fontSize="sm">
-                Microservices at scale
-              </Text>
-            </Box>
-            <Box>
-              <Text fontSize="lg" color="text">
-                <Text as="span" fontWeight="bold" color="accent1">2021:</Text> Software Engineer @ ICBC
-              </Text>
-              <Text color="gray.400" fontSize="sm">
-                Automation & internal systems
-              </Text>
-            </Box>
-          </VStack>
-        </VStack>
+        
         {/* Contact Links */}
         <VStack
           w="full"

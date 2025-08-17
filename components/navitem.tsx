@@ -9,9 +9,10 @@ type NavItemProps = {
   icon?: React.ReactNode;
   download?: boolean;        // use for files
   ariaLabel?: string;        // optional a11y label
+  onClick?: () => void; 
 };
 
-export function NavItem({ href, children, icon, download, ariaLabel }: NavItemProps) {
+export function NavItem({ href, children, icon, download, ariaLabel, onClick}: NavItemProps) {
   // If it's a file download, render a plain <a>. Otherwise, use NextLink for routing.
   const linkProps = download
     ? { as: "a" as const, href, download: "" }
@@ -27,6 +28,7 @@ export function NavItem({ href, children, icon, download, ariaLabel }: NavItemPr
       color="inherit"                               // inherits header "text"
       _hover={{ color: "linkHover", textDecoration: "none" }}
       aria-label={ariaLabel}
+      onClick={onClick}     
     >
       {icon && (
         <Box

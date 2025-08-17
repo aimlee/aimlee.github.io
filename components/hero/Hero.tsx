@@ -19,14 +19,14 @@ const MotionVStack = motion(VStack);
 
 
 const TypewriterPosition = () => {
-  const positions = ['AI/ML', 'Software', 'Full-Stack'];
+  const POSITIONSs = ['AI/ML', 'Software', 'Full-Stack'];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [typeSpeed, setTypeSpeed] = useState(150);
 
   useEffect(() => {
-    const currentPosition = positions[currentIndex];
+    const currentPosition = POSITIONSs[currentIndex];
     
     const handleType = () => {
       if (!isDeleting) {
@@ -47,7 +47,7 @@ const TypewriterPosition = () => {
         } else {
           // Finished deleting, move to next position
           setIsDeleting(false);
-          setCurrentIndex((prev) => (prev + 1) % positions.length);
+          setCurrentIndex((prev) => (prev + 1) % POSITIONSs.length);
           setTypeSpeed(150);
           return;
         }
@@ -56,11 +56,11 @@ const TypewriterPosition = () => {
 
     const timer = setTimeout(handleType, typeSpeed);
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, currentIndex, typeSpeed, positions]);
+  }, [displayText, isDeleting, currentIndex, typeSpeed, POSITIONSs]);
 
   return (
     <MotionText
-      initial={{ opacity: 0, y: 6 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.1 }}
       fontSize="xs"
@@ -154,7 +154,7 @@ export default function Hero() {
                 </Box>
 
             <MotionHeading
-              initial={{ opacity: 0, y: 8 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
               size={{ base: "2xl", sm: "3xl" }}
@@ -166,7 +166,7 @@ export default function Hero() {
             </MotionHeading>
 
             <MotionText
-              initial={{ opacity: 0, y: 10 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               fontSize={{ base: "md", sm: "lg" }}
@@ -178,7 +178,7 @@ export default function Hero() {
 
             {/* Action Buttons */}
             <MotionVStack
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
               mt={2}
