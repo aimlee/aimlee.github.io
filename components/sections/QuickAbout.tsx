@@ -142,6 +142,45 @@ export default function QuickAbout() {
             </Box>
           </VStack>
         </VStack>
+
+        {/* Skills */}
+        <VStack
+          w="full"
+          align="flex-start"
+          textAlign="left"
+        >
+          <Heading size="xl" color="accent1">
+            Skills
+          </Heading>
+          <Box h="1px" bg="accent1" w="60px" />
+          <HStack
+            wrap="wrap"
+            gap={3}
+            justify="center"
+            maxW="3xl"
+          >
+            {skills.map((skill) => (
+              <Tag.Root
+                key={skill}
+                variant="outline"
+                borderColor="gray.600"
+                borderRadius="full"
+                px="4"
+                py="2"
+                _hover={{ 
+                  borderColor: "accent1", 
+                  transform: "translateY(-2px)",
+                  shadow: "md"
+                }}
+                transition="all 0.2s ease"
+              >
+                <Tag.Label color="text" fontWeight="medium">
+                  {skill}
+                </Tag.Label>
+              </Tag.Root>
+            ))}
+          </HStack>
+        </VStack>
         
         {/* Contact Links */}
         <VStack
