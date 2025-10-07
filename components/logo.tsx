@@ -48,7 +48,7 @@ const Logo = () => {
         fontFamily="'M PLUS Rounded 1c', sans-serif"
         fontWeight="bold"
       >
-        Ali Kurban
+        Alex Corbin
       </Text>
     </ChakraLink>
   );
