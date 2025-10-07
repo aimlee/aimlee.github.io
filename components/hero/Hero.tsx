@@ -162,7 +162,7 @@ export default function Hero() {
               lineHeight="shorter"
               color="text"
             >
-              Ali Kurban
+              Alex Corbin
             </MotionHeading>
 
             <MotionText
